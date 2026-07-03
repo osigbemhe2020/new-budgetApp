@@ -10,7 +10,7 @@
 // consumer (App.jsx) and one producer slot, so a Context provider would just
 // be ceremony around a single function reference.
 
-export const API_URL = 'http://localhost:3002';
+export const API_URL = import.meta.env.VITE_API_URL || 'http://localhost:3002';
 
 let unauthorizedHandler = null;
 let hasNotified = false; // guards against multiple simultaneous 401s
